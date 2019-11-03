@@ -3,5 +3,13 @@
         <%= link_to root_path do %>
             <span><%= image_tag "logo/nia.png", class: "navbar-brand" %></span>
         <% end %>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <%= link_to 'Sign up', root_path, class: 'btn btn-danger my-2 my-sm-0' %>
+            </li>
+            <li>
+                <%= link_to 'Log in', root_path, class: 'btn btn-outline-secondary my-2 my-sm-0' %>
+            </li>
+        </ul>
     </div>
 </nav>
