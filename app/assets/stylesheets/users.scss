@@ -2,12 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// new ----------
+// new.html.erb ----------
 .user-new-wrapper {
     text-align: center;
 }
 
-header img {
+.nia_log {
     height: 100px;
 }
 
@@ -19,4 +19,11 @@ main .btn {
 
 main {
     margin-top: 50px;
+}
+// signup.html.erb -----
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
 }

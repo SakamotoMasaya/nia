@@ -3,14 +3,14 @@
     <header>
         <h1>
             <%= link_to root_path do %>
-                <span><%= image_tag "logo/nia.png", class: "navbar-brand mt-4" %></span>
+                <span><%= image_tag "logo/nia.png", class: "navbar-brand mt-4 nia_log" %></span>
             <% end %>
         </h1>
     </header>
 
     <main>
         <div class="col-md-12">  
-            <%= link_to 'メールアドレスで登録', new_user_path, class: 'btn btn-secondary btn-md mb-3' %>
+            <%= link_to 'メールアドレスで登録', signup_users_path, class: 'btn btn-secondary btn-md mb-3' %>
             <%= link_to 'Googleで登録', new_user_path, class: 'btn btn-secondary btn-md mb-3' %>
             <%= link_to 'Twitterで登録', new_user_path, class: 'btn btn-secondary btn-md' %>
         </div>
