@@ -1,2 +1,10 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="user-new-wrapper">
+    <header>
+        <h1>
+            <%= link_to root_path do %>
+                <span><%= image_tag "logo/nia.png", class: "navbar-brand" %></span>
+            <% end %>
+        </h1>
+    </header>
+</div>

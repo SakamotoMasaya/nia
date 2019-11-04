@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
 <nav class="navber navber-expand-md navbar-light bg-light sticky-top">
     <div class="container">
         <%= link_to root_path do %>
@@ -5,7 +6,7 @@
         <% end %>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-              <%= link_to '新規登録', root_path, class: 'signup btn btn-danger mr-2 h-32' %>
+              <%= link_to '新規登録', new_user_path, class: 'signup btn btn-danger mr-2 h-32' %>
             </li>
             <li class="nav-item">
               <%= link_to 'ログイン', root_path, class: 'login btn btn-outline-primary' %>
