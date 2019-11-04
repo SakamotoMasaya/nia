@@ -1,7 +1,39 @@
-.btn-outline-secondary {
-    border: 1px solid #43b5eb;
+
+// .signup {
+//     background-color: rgb(22, 194, 6);
+//     pointer-events: none;
+//     color: white;
+// }
+
+// .login {
+//     pointer-events: none;
+//     color: saddlebrown;
+//     border: 1px solid saddlebrown;
+//     border-radius: 10px;
+// }
+
+// .nav > li {
+//     cursor: pointer;
+// }
+// .nav > li > a {
+//     height: 40px;
+// }
+
+// navbar ----------
+.navbar-brand {
+    width: 60px;
 }
 
-.sign {
-    float: right;
+// .signup,
+// .login {
+//     pointer-events: none;
+// }
+
+.login {
+    color: saddlebrown;
+    border-color: saddlebrown;
 }
+
+// .justify-content-end li {
+//     cursor: pointer;
+// }
