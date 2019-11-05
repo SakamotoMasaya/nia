@@ -11,17 +11,17 @@
         <%# <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputEmail">Email address</label> %>
         <%= f.label :ニックネーム %>
-        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.text_field :name, class: 'form-control', placeholder: '例）太郎' %>
     </div>
 
     <div class="form-label-group">
         <%= f.label :メールアドレス %>
-        <%= f.text_field :email, class: 'form-control' %>
+        <%= f.text_field :email, class: 'form-control', placeholder: 'nia@nia.com' %>
     </div>
 
     <div class="form-label-group">
         <%= f.label :パスワード %>
-        <%= f.text_field :password, class: 'form-control' %>
+        <%= f.text_field :password, class: 'form-control', placeholder: '7文字以上' %>
     </div>
 
     <%# <div class="checkbox mb-3">
