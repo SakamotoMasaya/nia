@@ -1,2 +1,30 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<%= stylesheet_link_tag    'sessions', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= form_for :session, url: login_path, html: {class: 'form-signin'} do |f| %>
+    <div class="text-center mb-4">
+        <%= link_to root_path do %>
+            <span><%= image_tag "logo/nia.png", class: "navbar-brand mt-4 nia_log" %></span>
+        <% end %>
+        <h1 class="h3 mt-4 font-weight-normal">ログイン</h1>
+    </div>
+
+    <div class="form-label-group">
+        <%= f.label :メールアドレス %>
+        <%= f.text_field :email, class: 'form-control', placeholder: 'nia@nia.com' %>
+    </div>
+
+    <div class="form-label-group">
+        <%# <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputEmail">Email address</label> %>
+        <%= f.label :パスワード %>
+        <%= f.text_field :password, class: 'form-control', placeholder: '7文字以上' %>
+    </div>
+
+    <%# <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div> %>
+    <%= f.submit "ログイン", class: 'btn btn-block btn-danger mt-4' %>
+    <%# <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p> %>
+<%end%>
