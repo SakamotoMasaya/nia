@@ -1,4 +1,3 @@
 class MypagesController < ApplicationController
-  def top
-  end
+  def top; end
 end
