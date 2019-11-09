@@ -5,4 +5,8 @@ class User < ApplicationRecord
   # 文字列の開始位置　a-zA-Zを含むかつ\dを含む a-zA-z\dの中から　文字列の終了位置
 
   has_secure_password
+
+  has_many :seller_items, -> { where('buyer_id is NULL') }, class_name: 'Items', foreign_key: 'seller_id'
+  has_many :sold_items, -> { where('buyer_id is not NULL') }, class_name: 'Items', foreign_key: 'seller_id'
+  has_many :buyer_items, class_name: 'Items', foreign_key: 'buyer_id'
 end
