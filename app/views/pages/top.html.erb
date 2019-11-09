@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
-<nav class="navber navber-expand-md navbar-light bg-light sticky-top">
+<nav class="navber navber-expand-md navbar-light bg-white shadow-sm sticky-top pb-3">
     <div class="container">
         <%= link_to root_path do %>
-            <span><%= image_tag "logo/nia.png", class: "navbar-brand" %></span>
+            <h1><%= image_tag "logo/nia.png", class: "navbar-brand", alt: 'nia' %></h1>
         <% end %>
         <ul class="nav justify-content-end">
           <% if logged_in? %>
@@ -20,3 +20,92 @@
         </ul>
     </div>
 </nav>
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <span class="bg-secondary"></span>
+          <div class="card-body">
+            <p class="font-weight-light">りんご</p>
+            <p class="font-weight-bold">300円</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <span class="bg-secondary"></span>
+          <div class="card-body">
+            <p class="font-weight-light">りんご</p>
+            <p class="font-weight-bold">300円</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <span class="bg-secondary"></span>
+          <div class="card-body">
+            <p class="font-weight-light">りんご</p>
+            <p class="font-weight-bold">300円</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <span class="bg-secondary"></span>
+          <div class="card-body">
+            <p class="font-weight-light">りんご</p>
+            <p class="font-weight-bold">300円</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <span class="bg-secondary"></span>
+          <div class="card-body">
+            <p class="font-weight-light">りんご</p>
+            <p class="font-weight-bold">300円</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <span class="bg-secondary"></span>
+          <div class="card-body">
+            <p class="font-weight-light">りんご</p>
+            <p class="font-weight-bold">300円</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <span class="bg-secondary"></span>
+          <div class="card-body">
+            <p class="font-weight-light">りんご</p>
+            <p class="font-weight-bold">300円</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <span class="bg-secondary"></span>
+          <div class="card-body">
+            <p class="font-weight-light">りんご</p>
+            <p class="font-weight-bold">300円</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+</div> 
+
+<!-- footer -->
+<div class="sell-button position-fixed">
+  <%= link_to root_url do %>
+    <div class="sell-button-body">
+      <span>出品する</span>
+    </div>
+  <% end %>
+</div>
