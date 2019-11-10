@@ -74,3 +74,6 @@ gem 'jquery-rails'
 gem 'bcrypt'
 
 gem 'shrine'
+
+gem 'image_processing'
+gem 'mini_magick'
