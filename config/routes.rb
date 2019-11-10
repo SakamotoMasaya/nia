@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 
   get '/mypage', to: 'mypages#top'
 
-  get 'items/new'
+  get '/sell', to: 'items#new'
+  post '/sell', to: 'items#create'
 
   root 'pages#top'
 end
