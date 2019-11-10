@@ -42,9 +42,20 @@
   font-size: 18px;
 }
 
-.card img {
-  // display: block;
+
+.card {
   height: 0;
+  overflow: hidden;
+  padding: 0 0 100%;
+  position: relative;
   width: 100%;
-  padding-bottom: 100%;
+  display: block;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }

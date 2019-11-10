@@ -23,83 +23,18 @@
 <div class="album py-5 bg-light">
   <div class="container">
 
-  <% @items.each do |item| %>
     <div class="row">
-      <div class="col-md-3">
-        <div class="card mb-4 shadow-sm">
-          <%= image_tag item.image[:medium].url %>
-          <div class="card-body">
-            <p class="font-weight-light">りんご</p>
-            <p class="font-weight-bold">300円</p>
+      <% @items.first(8).each do |item| %>
+        <div class="col-sm-6 col-md-3">
+          <div class="card mb-1 shadow-sm">
+            <%= image_tag item.image[:small].url %>
+          </div>
+          <div class="item-content">
+            <p class="font-weight-light"><%= item.name %></p>
+            <p class="font-weight-normal"><%= item.price %></p>
           </div>
         </div>
-      </div>
-    <% end %>
-
-
-      <div class="col-md-3">
-        <div class="card mb-4 shadow-sm">
-          <span class="bg-secondary"></span>
-          <div class="card-body">
-            <p class="font-weight-light">りんご</p>
-            <p class="font-weight-bold">300円</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-4 shadow-sm">
-          <span class="bg-secondary"></span>
-          <div class="card-body">
-            <p class="font-weight-light">りんご</p>
-            <p class="font-weight-bold">300円</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-4 shadow-sm">
-          <span class="bg-secondary"></span>
-          <div class="card-body">
-            <p class="font-weight-light">りんご</p>
-            <p class="font-weight-bold">300円</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-4 shadow-sm">
-          <span class="bg-secondary"></span>
-          <div class="card-body">
-            <p class="font-weight-light">りんご</p>
-            <p class="font-weight-bold">300円</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-4 shadow-sm">
-          <span class="bg-secondary"></span>
-          <div class="card-body">
-            <p class="font-weight-light">りんご</p>
-            <p class="font-weight-bold">300円</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-4 shadow-sm">
-          <span class="bg-secondary"></span>
-          <div class="card-body">
-            <p class="font-weight-light">りんご</p>
-            <p class="font-weight-bold">300円</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-4 shadow-sm">
-          <span class="bg-secondary"></span>
-          <div class="card-body">
-            <p class="font-weight-light">りんご</p>
-            <p class="font-weight-bold">300円</p>
-          </div>
-        </div>
-      </div>
+      <% end %>
     </div>
 
   </div> 
