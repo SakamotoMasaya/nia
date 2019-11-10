@@ -5,7 +5,8 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    if @item.save
+    @item.seller_id = current_user.id
+    if @item.save!
       redirect_to root_url, success: '出品しました'
     else
       flash.now[:danger] = '出品に失敗しました'
@@ -16,6 +17,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :name, :description, :price)
+    params.require(:item).permit(:image, :name, :discription, :price)
   end
 end
