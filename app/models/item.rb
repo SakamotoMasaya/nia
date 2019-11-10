@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  include ImageUploader[:image]
   validates :description, presence: true
   validates :seller_id, presence: true
   validates :buyer_id, presence: true

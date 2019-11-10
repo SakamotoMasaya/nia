@@ -14,5 +14,7 @@ Rails.application.routes.draw do
 
   get '/mypage', to: 'mypages#top'
 
+  get 'items/new'
+
   root 'pages#top'
 end
