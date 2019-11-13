@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   get '/sell', to: 'items#new'
   post '/sell', to: 'items#create'
 
+  resources :relationships, only: %i[create destroy]
+
   root 'pages#top'
 end
