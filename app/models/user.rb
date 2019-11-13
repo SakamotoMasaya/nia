@@ -9,4 +9,9 @@ class User < ApplicationRecord
   has_many :seller_items, -> { where('buyer_id is NULL') }, class_name: 'Items', foreign_key: 'seller_id'
   has_many :sold_items, -> { where('buyer_id is not NULL') }, class_name: 'Items', foreign_key: 'seller_id'
   has_many :buyer_items, class_name: 'Items', foreign_key: 'buyer_id'
+
+  has_many :relationships
+  has_many :followings, through: :relationships, source: :follow
+  has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
+  has_many :followers, through: :reverse_of_relationships, source: :user
 end
