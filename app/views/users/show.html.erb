@@ -1,2 +1,10 @@
 <%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= render 'relationships/follow_button', user: @user %>
+<div class="user-show">
+    <div class="container">
+        <div class="user">
+            <%= image_tag "default/human.png" %>
+            <h2><%= @user.name %></h2>
+        </div>
+    </div>
+</div>
