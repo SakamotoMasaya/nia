@@ -1,0 +1,10 @@
+<div class="item-body col-xs col-md-3">
+    <div class="mb-1 shadow-sm">
+        <%= image_tag @item.image[:small].url %>
+    </div>
+    <div class="item-content">
+        <p class="font-weight-light"><%= @item.name %></p>
+        <p class="font-weight-normal"><%= @item.price %></p>
+        <%= link_to '出品者', user_path(@item.seller_id), class: 'btn btn-outline-primary' %>
+    </div>
+</div>

@@ -20,3 +20,11 @@
 // .justify-content-end li {
 //     cursor: pointer;
 // }
+
+.item-link {
+    color: #212529;
+    &:hover {
+        color: #212529;
+        text-decoration: none;
+    }
+}
