@@ -75,5 +75,7 @@ gem 'bcrypt'
 
 gem 'shrine'
 
+gem 'carrierwave'
+
 gem 'image_processing'
 gem 'mini_magick'
