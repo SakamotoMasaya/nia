@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.seller_id = current_user.id
     if @item.save!
-      # image_params.each do |image|
+      # params[:item_image][:image].each do |image|
       #   @item.item_image.create(image: image, item_id: @item.id)
       # end
       redirect_to root_url, success: '出品しました'
@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :name, :discription, :price)
+    params.require(:item).permit(:image, :name, :discription, :price, {images: []})
   end
 
   # def image_params

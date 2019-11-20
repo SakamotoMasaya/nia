@@ -28,7 +28,9 @@
         <div class="item-body col-xs col-md-3">
           <%= link_to(item_path(item), class:'item-link') do %>  
             <div class="card mb-1 shadow-sm">
-              <%= image_tag item.image[:small].url %>
+              <%= @images.each do |image| %>
+                <%= image_tag image.images[:original_filename] %>
+              <% end %>
             </div>
             <div class="item-content">
               <p class="font-weight-light"><%= item.name %></p>

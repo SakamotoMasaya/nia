@@ -17,5 +17,7 @@ module Nia
     # the framework and any gems in your application.
 
     config.i18n.default_locale = :ja
+
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
   end
 end
