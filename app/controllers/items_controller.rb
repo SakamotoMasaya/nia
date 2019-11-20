@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find_by(id: params[:id])
+    @images = ItemImage.where(item_id: @item.id).order(id: :desc)
   end
 
   private
