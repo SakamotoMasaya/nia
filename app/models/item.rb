@@ -8,4 +8,7 @@ class Item < ApplicationRecord
 
   has_many :item_images, dependent: :destroy
   accepts_nested_attributes_for :item_images
+
+  has_many :favorites
+  has_many :favorite_users, through: :favorites, source: 'user'
 end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/top'
+  root 'pages#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :users do
@@ -20,5 +21,5 @@ Rails.application.routes.draw do
 
   resources :relationships, only: %i[create destroy]
 
-  root 'pages#top'
+  resources :favorites, only: %i[index create destroy]
 end

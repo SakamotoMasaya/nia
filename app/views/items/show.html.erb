@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag    'items', media: 'all', 'data-turbolinks-track': 'reload' %>
 <div class="item-body col-xs col-md-3">
     <div class="item mb-1 shadow-sm">
-        <%= @images.each do |i| %>
+        <% @images.each do |i| %>
             <%= image_tag i.image.url %>
         <% end %>
     </div>
@@ -10,4 +10,13 @@
         <p class="font-weight-normal"><%= @item.price %></p>
         <%= link_to '出品者', user_path(@item.seller_id), class: 'btn btn-outline-primary' %>
     </div>
+    <% if !@item.favorite_users.include?(current_user) %>
+            <%= link_to favorites_path(item_id: @item.id), method: :post, class: 'btn btn-outline-danger' do %>
+                <p>お気に入り</p>
+            <% end %>
+        <% else %>
+            <%= link_to favorite_path(item_id: @item.id), method: :delete, class: 'btn btn-danger' do %>
+                <p>お気に入り解除</p>
+            <% end %>
+    <% end %>
 </div>

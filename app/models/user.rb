@@ -29,4 +29,8 @@ class User < ApplicationRecord
   def following?(other_user)
     self.followings.include?(other_user)
   end
+
+  has_many :items
+  has_many :favorites
+  has_many :favorite_items, through: :favorites, source: 'item'
 end
