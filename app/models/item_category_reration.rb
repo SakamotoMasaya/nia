@@ -1,0 +1,2 @@
+class ItemCategoryReration < ApplicationRecord
+end
