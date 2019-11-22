@@ -31,11 +31,8 @@ class ItemsController < ApplicationController
       :name,
       :discription,
       :price,
-      item_images_attributes: [:image]
+      item_images_attributes: [:image],
+      category_ids: []
     )
   end
-
-  # def image_params
-  #   params.require(:item).permit(item_images_attributes: { image: [] })
-  # end
 end
