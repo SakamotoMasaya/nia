@@ -12,6 +12,6 @@ class Item < ApplicationRecord
   has_many :favorites
   has_many :favorite_users, through: :favorites, source: 'user'
 
-  has_many :item_category_reration
+  has_many :item_category_relations
   has_many :categories, through: :item_category_relations
 end

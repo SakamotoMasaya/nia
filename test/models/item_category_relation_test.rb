@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ItemCategoryRerationTest < ActiveSupport::TestCase
+class ItemCategoryRelationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
