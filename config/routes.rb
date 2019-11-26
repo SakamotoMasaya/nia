@@ -17,7 +17,9 @@ Rails.application.routes.draw do
 
   get '/sell', to: 'items#new'
   post '/sell', to: 'items#create'
-  resources :items
+  resources :items do
+    resources :buy_request, only: %i[index create]
+  end
 
   resources :relationships, only: %i[create destroy]
 

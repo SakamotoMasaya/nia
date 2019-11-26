@@ -1,0 +1,2 @@
+module BuyRequestHelper
+end
