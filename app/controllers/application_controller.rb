@@ -11,4 +11,10 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !current_user.nil?
   end
+
+  def authenticate_user
+    if @current_user == nil
+      redirect_to signup_users_path, notic: 'ログインが必要です'
+    end
+  end
 end
