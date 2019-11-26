@@ -1,13 +1,16 @@
 class ItemsController < ApplicationController
   def new
     @item = Item.new
+    @item.item_category_relations.build
     @item_image = @item.item_images.build
   end
 
   def create
+    # @items = Item.create(params[:category_id])
     @item = Item.new(item_params)
     @item.seller_id = current_user.id
     if @item.save!
+      # @item.item_category_relations.create
       params[:item_images]['image'].each do |a|
         @item_image = @item.item_images.create!(image: a)
       end
@@ -32,7 +35,7 @@ class ItemsController < ApplicationController
       :discription,
       :price,
       item_images_attributes: [:image],
-      category_ids: []
+      item_category_relations_attributes: [:category_id]
     )
   end
 end

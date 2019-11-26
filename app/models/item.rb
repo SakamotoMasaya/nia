@@ -12,6 +12,7 @@ class Item < ApplicationRecord
   has_many :favorites
   has_many :favorite_users, through: :favorites, source: 'user'
 
-  has_many :item_category_relations
+  has_many :item_category_relations, dependent: :destroy
   has_many :categories, through: :item_category_relations
+  accepts_nested_attributes_for :item_category_relations
 end
