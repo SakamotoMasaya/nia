@@ -19,4 +19,5 @@
                 <p>お気に入り解除</p>
             <% end %>
     <% end %>
+    <%= link_to '購入ページ', item_buy_request_index_path(item_id: @item.id), class: 'btn btn-danger' %>
 </div>
