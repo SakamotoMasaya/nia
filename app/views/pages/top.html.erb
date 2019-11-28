@@ -31,6 +31,9 @@
               <% @images.where(item_id:item.id).first(1).each do |i| %>
                 <%= image_tag i.image.url %>
               <% end %>
+              <% unless item.buyer.nil? %>
+                <div class="sold-out">売り切れ</div>
+              <% end %>
             </div>
             <div class="item-content">
               <p class="font-weight-light"><%= item.name %></p>
