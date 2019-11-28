@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :items do
     resources :buy_request, only: %i[index create]
   end
+  get '/search', to: 'items#search'
 
   resources :relationships, only: %i[create destroy]
 

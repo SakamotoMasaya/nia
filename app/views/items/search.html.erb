@@ -1,0 +1,26 @@
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <% @items.each do |item| %>
+        <div class="item-body col-xs col-md-3">
+          <%= link_to(item_path(item), class:'item-link') do %>  
+            <div class="card mb-1 shadow-sm">
+              <% @images.where(item_id:item.id).first(1).each do |i| %>
+                <%= image_tag i.image.url %>
+              <% end %>
+              <% unless item.buyer.nil? %>
+                <div class="sold-out">売り切れ</div>
+              <% end %>
+            </div>
+            <div class="item-content">
+              <p class="font-weight-light"><%= item.name %></p>
+              <p class="font-weight-normal"><%= item.price %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+  </div> 
+</div> 

@@ -28,6 +28,11 @@ class ItemsController < ApplicationController
     @images = ItemImage.where(item_id: @item.id).order(id: :desc)
   end
 
+  def search
+    @items = Item.search(params[:search])
+    @images = ItemImage.all
+  end
+
   private
 
   def item_params

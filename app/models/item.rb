@@ -15,4 +15,10 @@ class Item < ApplicationRecord
   has_many :item_category_relations, dependent: :destroy
   has_many :categories, through: :item_category_relations
   accepts_nested_attributes_for :item_category_relations
+
+  def self.search(search)
+    return Item.all unless search
+
+    Item.where(['name LIKE ?', "%#{search}%"])
+  end
 end
