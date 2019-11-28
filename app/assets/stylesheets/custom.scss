@@ -70,6 +70,14 @@
      font-size: 18px;
    }
  }
+// item-list-view
+ .item-link {
+  color: #212529;
+  &:hover {
+      color: #212529;
+      text-decoration: none;
+  }
+}
 
 // @media (max-width: 767px)
 @media (max-width: 767px){
