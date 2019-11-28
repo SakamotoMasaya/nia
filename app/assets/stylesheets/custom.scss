@@ -1,3 +1,31 @@
+// navbar ----------
+.navbar-brand {
+  width: 60px;
+}
+
+.container h1,
+.search {
+  display: inline-block;
+}
+
+
+
+// -----
+img,
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// item-list-view
+.item-link {
+  color: #212529;
+  &:hover {
+      color: #212529;
+  }
+}
+
 .alert {
     margin-bottom: 0px;
     position: fixed;
@@ -42,6 +70,16 @@
   width: 100%;
 }
 
+// .sold-out
+.sold-out {
+  background-color: #dc3545;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 // @media (min-width: 768px)
   //sell-button
   @media (min-width: 768px){ 
@@ -69,14 +107,6 @@
      color: white;
      font-size: 18px;
    }
- }
-// item-list-view
- .item-link {
-  color: #212529;
-  &:hover {
-      color: #212529;
-      text-decoration: none;
-  }
 }
 
 // @media (max-width: 767px)

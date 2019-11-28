@@ -11,9 +11,37 @@
   </head>
 
   <body>
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
-  <% end %>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+    <% end %>
+
+    <nav class="navber navber-expand-md navbar-light bg-white shadow-sm sticky-top pb-3">
+        <div class="container">
+            <%= link_to root_path do %>
+                <h1><%= image_tag "logo/nia.png", class: "navbar-brand", alt: 'nia' %></h1>
+            <% end %>
+            <div class="search">
+              <%= form_tag(search_path, method: :get) do %>
+                <%= text_field_tag :search %>
+                <%= submit_tag 'Search', name: :nil %>
+              <% end %>
+            </div>
+            <ul class="nav justify-content-end">
+              <% if logged_in? %>
+                <li class="nav-item">
+                  <%= link_to 'マイページ', mypage_path, class: 'login btn btn-light' %>
+                </li>
+              <% else %>
+                <li class="nav-item">
+                  <%= link_to '新規登録', signup_users_path, class: 'signup btn btn-danger mr-2 ' %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to 'ログイン', login_path, class: 'login btn btn-outline-primary' %>
+                </li>
+              <% end %>
+            </ul>
+        </div>
+    </nav>
 
     <%= yield %>
     <script>
