@@ -25,4 +25,7 @@ Rails.application.routes.draw do
   resources :relationships, only: %i[create destroy]
 
   resources :favorites, only: %i[index create destroy]
+
+  get '/transaction', to: 'transaction#top'
+  get '/transaction/order_status/:item_id', to: 'transaction#index'
 end
