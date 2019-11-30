@@ -1,8 +1,12 @@
 <%= stylesheet_link_tag    'items', media: 'all', 'data-turbolinks-track': 'reload' %>
-<div class="item-body col-xs col-md-3">
-    <div class="item mb-1 shadow-sm">
+<div class="container">
+    <div class="item row">
         <% @images.each do |i| %>
-            <%= image_tag i.image.url %>
+            <div class="col-xs col-md-3">
+                <div class="item-image mb-1 shadow-sm">
+                    <%= image_tag i.image.url %>
+                </div>
+            </div>
         <% end %>
     </div>
     <div class="item-content">

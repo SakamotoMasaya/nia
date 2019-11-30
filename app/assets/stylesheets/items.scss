@@ -19,3 +19,25 @@
 //     object-fit: cover;
 //     width: 100%;
 //   }
+
+.item-image {
+    box-sizing: border-box;
+    padding: 0;
+    padding-right: 3px;
+    padding-left: 3px;
+
+    height: 0;
+    overflow: hidden;
+    padding: 0 0 100%;
+    position: relative;
+    width: 100%;
+  }
+  
+  .item-image img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    display: inline-block;
+  }
