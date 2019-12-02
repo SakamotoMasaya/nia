@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     resources :buy_request, only: %i[index create]
   end
 
-  resources :transaction, only: %i[show]
+  resources :transaction, only: %i[show create]
 
   get '/search', to: 'items#search'
 

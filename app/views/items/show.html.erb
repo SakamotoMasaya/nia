@@ -25,6 +25,8 @@
     <% end %>
     <%= link_to '購入ページ', item_buy_request_index_path(item_id: @item.id), class: 'btn btn-danger' %>
 
-    <%= link_to '取引画面', transaction_path(@item), class: 'btn btn-info' %>
+    <% if current_user.id == @item.buyer_id || current_user.id == @item.seller_id && @item.buyer_id != nil %>
+        <%= link_to '取引画面', transaction_path(@item), class: 'btn btn-info' %>
+    <% end %>
 
 </div>

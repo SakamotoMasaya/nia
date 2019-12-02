@@ -1,1 +1,16 @@
-<h1>hahahahas</h1>
+<div class="text-center mb-4">
+    <%= link_to root_path do %>
+        <span><%= image_tag "logo/nia.png", class: "navbar-brand mt-4 nia_log" %></span>
+    <% end %>
+
+    <h1 class="h3 mt-4 font-weight-normal">取引チャット</h1>
+    <ul id="chat-ndex">
+        <% @text.each do |message| %>
+            <li><%= message.text %></li>
+        <% end %>
+    </ul>
+
+    <%= form_tag(relationships_path) do %>
+        <input id="chat-form" type="text" data-behavior="chat_post" name="message" value="入力">
+    <% end %>
+</div>
