@@ -2,11 +2,11 @@ class TransactionController < ApplicationController
   def index; end
 
   def show
-    @text = Message.all
+    @messages = Message.all
   end
 
   def create
-    texts = Message.new(text: params[:message])
-    texts.save
+    # texts = Message.new(text: params[:message])
+    # texts.save
   end
 end

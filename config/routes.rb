@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'pages/top'
   root 'pages#top'
+  mount ActionCable.server => '/cable'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :users do
